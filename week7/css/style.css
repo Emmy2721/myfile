@@ -1,0 +1,65 @@
+/* Styles for my currency form! */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color:beige;
+}
+
+form {
+    width: 400px;
+    margin: 20px auto;
+
+}
+
+
+
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+input[type=submit]{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form ul {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.box {
+    width: 400px;
+    padding: 10px;
+    margin:0 auto;
+
+}
+
+
+.error {
+    display: block;
+    color: red;
+    margin-bottom: 8px;
+}
