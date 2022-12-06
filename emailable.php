@@ -5,7 +5,6 @@ $last_name = '';
 $email = '';
 $phone = '';
 $sports = '';
-$privacy = '';
 $first_name_err = '';
 $last_name_err = '';
 $email_err = '';
@@ -41,20 +40,35 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $email = $_POST['email'];
                 }
 
-        
-         if(empty($_POST['phone'])) {
-            $phone_err = 'Please fill out your phone number';
-            } else {
-                $phone = $_POST['phone'];
-            }
+       
+            
+        //  if(empty($_POST['phone'])) {
+        //     $phone_err = 'Please fill out your phone number';
+        //     } else {
+        //         $phone = $_POST['phone'];
+        //     }
 
+
+        if(empty($_POST['phone'])) { // if empty, type in your number
+            $phone_err = 'Your phone number please!';
+            } elseif(array_key_exists('phone', $_POST)){
+            if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+            { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+            $phone_err = 'Invalid format!';
+            } else{
+            $phone = $_POST['phone'];
+            } // end else
+            } // end main if
                      
+
+
         if(empty($_POST['sports'])) {
-            $wines_err = 'what, no sport?';
+            $sports_err = 'what, no sports?';
            } else {
-               $wines = $_POST['sports'];        
+               $sports = $_POST['sports'];        
            }
                    
+            
                     
             if(empty($_POST['privacy'])) {
                 $privacy_err = 'Please agree to our privacy policy';
@@ -62,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                    $privacy = $_POST['privacy'];        
                }
 
-         
+        
 // wines function
 
             function my_sports($sports) {
@@ -73,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
            $my_return = implode(', ', $_POST['sports']);
 
             }else{
-            $wines_err = 'Please fill out your sport activitys!';
+            $sports_err = 'Please fill out your wines!';
 
             }
 
@@ -93,38 +107,37 @@ $_POST['privacy'])) {
 
 
 $to = 'emubirhanu6@gmail.com';
-$subject = 'Test email on ' .date('m/d/y h i A');
+$subject = 'Test Email on ' .date('m/d/y h i A');
 $body = '
 First Name : '.$first_name.' '.PHP_EOL.'
 Last Name : '.$last_name.' '.PHP_EOL.'
 Email : '.$email.' '.PHP_EOL.'
+
 Phone: '.$phone.' '.PHP_EOL.'
-sports: '.my_sports($sports).' '.PHP_EOL.'
+
+Wines: '.my_sports($sports).' '.PHP_EOL.'
 
 ';
 
 
 $headers = array(
-'From' => 'noreply@gmail.com'
+'From' => 'noreply@mystudentswa.com'
 );
 
 if(!empty($first_name  &&  
 $last_name && 
 $email && 
 $phone && 
-$sports )) {
+$sports) &&  
 
+preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
 
-
-
-
-mail($to, $subject, $body, $headers);
-header('Location:thx.php');
+    mail($to, $subject, $body, $headers);
+    header('Location:./thx.php');
 
 } //end isset
 
 }
-
 
 ?>
 
@@ -163,26 +176,31 @@ header('Location:thx.php');
 
 
     
- <label>Favorite sports</label>
+  <label>Phone</label>
+ <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php  if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone'])   ;?>">
+ <span class="error"><?php echo $phone_err ;?></span>
+
+ <label>Favorite Sports</label>
 
  <ul>
 
-<li>
- <input type="checkbox" name="sports[]" value="atletics"  <?php if(isset($_POST['atletics'])  && in_array('atletics', $sports))echo 'checked = "checked"';?>>Atletics
+ <li>
+ <input type="checkbox" name="sports[]" value="atletics"  <?php if(isset($_POST['sports'])  && in_array('atletics', $sports))echo 'checked = "checked"' ;?>>Atletics
 </li>
 
 <li>
- <input type="checkbox" name="sports[]" value="football"  <?php if(isset($_POST['football'])  && in_array('football', $sports)) echo 'checked = "checked"';?>>Football
+ <input type="checkbox" name="sports[]" value="football"  <?php if(isset($_POST['sports'])  && in_array('football', $sports))echo 'checked = "checked"';?>>Football
 </li>
 
 <li>
- <input type="checkbox" name="sports[]" value="baseball"  <?php if(isset($_POST['baseball'])  && in_array('baseball', $sports))echo 'checked = "checked"' ;?>>Baseball
+ <input type="checkbox" name="sports[]" value="golf"  <?php if(isset($_POST['sports'])  && in_array('golf', $sports)) echo 'checked = "checked"';?>>Golf
 </li>
 
 <li>
- <input type="checkbox" name="sports[]" value="golf"  <?php if(isset($_POST['golf'])  && in_array('golf',$sports))echo 'checked = "checked"' ;?>>Golf
+ <input type="checkbox" name="sports[]" value="basketball"  <?php if(isset($_POST['sports'])  && in_array('basketball', $sports))echo 'checked = "checked"' ;?>>Basketball
 </li>
-</ul>
+
+
 <span class="error"><?php echo $sports_err ;?></span>
 
 
