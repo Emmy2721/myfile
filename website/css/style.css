@@ -16,14 +16,14 @@ body {
     color: red;
 }
 header {
-    background-color: yellow;
+    background-color: rgb(227, 227, 27);
     padding:5px 0;
     
     
 }
 
 .inner-header {
-    max-width: 1200px;
+    max-width: 1000px;
     margin:0px auto;
     justify-content: center;
     

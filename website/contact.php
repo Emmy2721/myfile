@@ -1,14 +1,9 @@
 <?php 
 include('config.php');
+
 include('./includes/header.php'); ?>
 
-<main>
-
-<h2>Welcome to our contact page!</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sodales finibus quam a iaculis.
-     Quisque non vehicula metus, at rutrum velit. Donec vel pulvinar mi. Maecenas et tellus ultrices, ornare arcu sit amet, 
-     aliquam tortor. </p>
-
+</aside>
 
      <?php
      include('./includes/form.php'); 
@@ -28,10 +23,6 @@ $email_err = '';
 $phone_err = '';
 $sports_err  = '';
 $privacy_err  = '';
-
-
-
-
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -150,6 +141,7 @@ $sports) &&
 preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
 
      mail($to, $subject, $body, $headers);
+     header('Location:thx.php');
 
 } //end isset
 
@@ -164,8 +156,87 @@ preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emailable Form</title>
-    <link href="css/style.css" type="text/css"
-    rel="stylesheet">
+    <style>
+
+/* Styles for my currency form! */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.inner-header {
+    max-width: 1000px;
+    margin:0px auto;
+    justify-content: center;
+}
+
+
+body {
+    background-color:beige;
+}
+
+form {
+    width: 400px;
+    margin: 20px auto;
+
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+input[type=submit]{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form ul {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.box {
+    width: 400px;
+    padding: 10px;
+    margin:0 auto;
+
+}
+
+
+aside {
+    width: 50%;
+    float: right;
+    margin-left: 50px;
+}
+
+
+.error {
+    display: block;
+    color: red;
+    margin-bottom: 8px;
+}
+
+ </style>
+
+
 
 </head>
 <body>
@@ -193,7 +264,7 @@ preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
 
     
   <label>Phone</label>
- <input type="tel" name="phone"  value="<?php  if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone'])   ;?>">
+ <input type="tel" name="phone" placeholder="xxx-xxx-xxxx" value="<?php  if(isset($_POST['phone'])) echo htmlspecialchars($_POST['phone'])   ;?>">
  <span class="error"><?php echo $phone_err ;?></span>
 
  <label>Favorite Sports</label>
@@ -231,8 +302,7 @@ preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
   <span class="error"><?php echo $privacy_err ;?></span>
 <input type="submit" value="Send it!">
 
-<input type="button" onclik="window.location.href='<?php   echo $_SERVER['PHP_SELF']     ;    ?>'" value="Reset">
-
+<p><a href="">Reset it!</a></p>
 
 </fieldest>
 </form>
@@ -240,12 +310,8 @@ preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) {
 
 </main>
 
-<aside>
-<h3>This is my aside</h3>
-  
-    
-</aside>
-<?php include('./includes/footer.php'); ?>
+
+
 
 </div>
 <!--end wrapper--->

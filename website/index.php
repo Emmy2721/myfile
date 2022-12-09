@@ -7,9 +7,9 @@ include('./includes/header.php'); ?>
 <div id="hero">
 <img src="image/twelve.jpg" alt="Twelve is greater than 3">
 
-</div>
-<!--end hero-->
 
+<!--end hero-->
+</div>
 
 <main>
 <h1>Welcome to our Web App Programming Class!</h1>
@@ -26,6 +26,50 @@ include('./includes/header.php'); ?>
 </main>
 
 <aside>
+<?php
+
+$photos[0] = 'photo1';
+$photos[1] = 'photo2';
+$photos[2] = 'photo3';
+$photos[3] = 'photo4';
+$photos[4] = 'photo5';
+
+
+$i = rand(0, 4);
+
+$selected_image =''.$photos[$i].'.jpg';
+echo '<img src="image/'.$selected_image. ' " alt="'.$photos[$i].'" >';
+
+
+function random_images($photos) {
+$my_return = '';    
+$i = rand(0, 4);
+$selected_image =''.$photos[$i].'.jpg';
+$my_return = '<img src="image/'.$selected_image. ' " alt="'.$photos[$i].'" >';
+return $my_return;
+
+} //end function
+
+
+echo random_images($photos);
+
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <h3>This is our headline three in our beautifull aside</h3>
     <p>Nunc ullamcorper justo at pellentesque molestie. 
         Curabitur ac eleifend ante. Fusce at mattis felis, eget posuere leo. 
