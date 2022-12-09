@@ -1,12 +1,9 @@
 <?php
-$animal1['Donald_Trump'], = 'trump_Former President from NY.';
-$animal2['Joe_Biden'] = 'biden_President from PA.';
-$animal3['Hilary_Clinton'] = 'clint_Secretary from NY.';
-$animal4['Bernie_Sanders'] = 'sande_Senator from VT.';
-
-$animal5['Kamala_Harris'] = 'harri_Vice President from CA.';
-
-
+$people['Donald_Trump']= 'trump_Former President from NY.';
+$people['Joe_Biden'] = 'biden_President from PA.';
+$people['Hilary_Clinton'] = 'clint_Secretary from NY.';
+$people['Bernie_Sanders'] = 'sande_Senator from VT.';
+$people['Kamala_Harris'] = 'harri_Vice President from CA.';
 
 // variable key and value
 // $name       the value is $image
@@ -17,7 +14,7 @@ $animal5['Kamala_Harris'] = 'harri_Vice President from CA.';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Week 7 Class exercise - pictures</title>
     <style>
 
         table {
@@ -25,11 +22,17 @@ $animal5['Kamala_Harris'] = 'harri_Vice President from CA.';
             border-collapse:collapse;
         }
 
+        body {
+    background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
         td {
             border:1px solid red;
         }
     
         </style>
+
+        
 </head>
 <body>
  <table>
