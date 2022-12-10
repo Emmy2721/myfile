@@ -40,7 +40,7 @@ nav ul {
     float: right;
     margin-top:30px;
     list-style-type: none;
-    justify-content: right;
+    justify-content: center;
 }
 
 
@@ -50,11 +50,16 @@ nav li {
     float:right;
     margin-right: 30px;
     justify-content: center;
+   
+    text-align: center;
+    list-style-type: none;
 }
 
 nav a {
     text-decoration: none;
-    justify-content: right;
+    justify-content: center;
+    text-align: center;
+    list-style-type: none;
 }
 #wrapper {
     max-width: 1200px;
@@ -63,11 +68,13 @@ nav a {
     overflow: hidden;
 }
 
-
+#nav {
+    justify-content: center;
+}
 
 
 nav {
-    justify-content: right;
+    justify-content: center;
 }
 
 #hero {
@@ -84,7 +91,7 @@ main {
 }
 
 aside {
-    width:45%;
+    width:50%;
     background-color:lightsalmon;
     float:right;
 }
