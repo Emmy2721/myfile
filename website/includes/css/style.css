@@ -40,7 +40,7 @@ nav ul {
     float: right;
     margin-top:30px;
     list-style-type: none;
-    justify-content: right;
+    justify-content: center;
 }
 
 
@@ -49,12 +49,13 @@ nav ul {
 nav li {
     float:right;
     margin-right: 30px;
-    justify-content: right;
+    justify-content: center;
+   
 }
 
 nav a {
     text-decoration: none;
-    justify-content: right;
+    justify-content: center;
 }
 #wrapper {
     max-width: 1200px;
@@ -66,8 +67,8 @@ nav a {
 
 
 
-nav {
-    justify-content: right;
+nav,#nav {
+    justify-content: center;
 }
 
 #hero {
