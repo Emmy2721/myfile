@@ -1,12 +1,14 @@
+
+<?php 
+include('config.php');
+include('./includes/header.php');?>
+
 <?php
-$animal1['Donald_Trump'], = 'trump_Former President from NY.';
-$animal2['Joe_Biden'] = 'biden_President from PA.';
-$animal3['Hilary_Clinton'] = 'clint_Secretary from NY.';
-$animal4['Bernie_Sanders'] = 'sande_Senator from VT.';
-
-$animal5['Kamala_Harris'] = 'harri_Vice President from CA.';
-
-
+$mountain['MountFuiji']= 'fuijj_mount.';
+$mountain['kirkjufell'] = 'kirkj_Kirkjufell.';
+$mountain['MountEverest'] = 'mount.';
+$mountain['Tablemoun'] = 'table.';
+$mountain['Aorakimoun'] = 'aorak.';
 
 // variable key and value
 // $name       the value is $image
@@ -25,21 +27,28 @@ $animal5['Kamala_Harris'] = 'harri_Vice President from CA.';
             border-collapse:collapse;
         }
 
-        td {
+        body {
+    background-color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+        td img {
             border:1px solid red;
+            max-width: 30%;
         }
     
         </style>
+
+        
 </head>
 <body>
  <table>
-<?php foreach($people as $name => $image)          :?>
+<?php foreach($mountain as $name => $image)          :?>
 <tr>
 
-<td><img src="image/<?php echo substr($image, 0, 5);?>.jpg" alt="<?php  echo str_replace('_', ' ', $name)  ;?> "> </td>
+<td><img src="image/<?php echo substr($image, 0, 5);?>.JPG" alt="<?php  echo str_replace('_', ' ', $name)  ;?> "> </td>
 
 <td><?php echo str_replace('_', ' ', $name)   ;?></td>
-<td></td>
+
 
 
 </tr>

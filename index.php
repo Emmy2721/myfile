@@ -5,31 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portal Page!</title>
-    <link href="css/styles.css" type="text/css"
-    rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <h1><a href="index.php">Mahlet's Portal Page</a></h1>
 
 <div id="wrapper">
 <nav>
-
 <ul>
-
-<li><a href="">Switch</a></li>
-<li><a href="">Troubleshoot</a></li>
-<li><a href="">Calculator</a></li>
-<li><a href="">Email</a></li>
-<li><a href="">Database</a></li>
-<li><a href="">Gallery</a></li>
+<li><a href="website/daily.php">Switch</a></li>
+<li><a href="troubleshoot.php">Troubleshoot</a></li>
+<li><a href="calculator.php">Calculator</a></li>
+<li><a href="email">Email</a></li>
+<li><a href="database">Database</a></li>
+<li><a href="gallery">Gallery</a></li>
 </ul>
-
+</nav>
 
 </nav>
 
 <main>
 <h2>About Mahlet</h2>
-<img src="images/IMG-0023.jpg" alt="Mahlet">
+<img src="image/IMG-0023.jpg" alt="Mahlet">
 <p>My name is Mahlet Birhanu, I am originally from Ethiopia and currently 
     attending database administration at Seattle central college, 
     I plan to continue my degree in Web development which is why I am taking this class. 
@@ -39,8 +36,11 @@
 
 
 <h2>MAMP</h2>
- <img src="images/IMG-0020.jpg" alt="MAMP">
-
+ <img src="image/IMG-0020.jpg" alt="MAMP">
+ <h3>error</h3>
+ <img src="image/IMG-0282.jpg" alt="error">
+ <h3>errorblue</h3>
+ <img src="image/blueerror.jpg" alt="error">
 </main>
 
 <aside>
@@ -48,11 +48,11 @@
 <h3>Week 2</h3>
 <ol>
 
-<li><a href="var.php">var.php</a></li>
-<li><a href="var2.php"></a></li>
-<li><a href="currency-logic.php">var.php</a></li>
-<li><a href="currency.php">var.php</a></li>
-<li><a href="heredoc.php">var.php</a></li>
+<li><a href="weeks/week2/var.php">var.php</a></li>
+<li><a href="weeks/week2/vars2.php">vars2.php</a></li>
+<li><a href="weeks/week2/currency-logic.php">currency-logic.php</a></li>
+<li><a href="weeks/week2/currency.php">currency.php</a></li>
+<li><a href="weeks/week2/heredoc.php">heredoc.php</a></li>
 
 </ol>
 
@@ -61,22 +61,22 @@
 <h3>week 3</h3>
 <ol>
 
-<li><a href="if.php">var.php</a></li>
-<li><a href="foreach.php">var.php</a></li>
-<li><a href="foloop.php">var.php</a></li>
-<li><a href="date.php">var.php</a></li>
-<li><a href="switch.php">var.php</a></li>
+<li><a href="weeks/week3/if.php">if.php</a></li>
+<li><a href="weeks/week3/foreach.php">foreach.php</a></li>
+<li><a href="weeks/week3/foloop.php">foloop.php</a></li>
+<li><a href="weeks/week3/date.php">date.php</a></li>
+<li><a href="weeks/week3/switch.php">switch.php</a></li>
 
 </ol>
 
 <h3>week 4</h3>
 <ol>
 
-<li><a href="form1.php">var.php</a></li>
-<li><a href="form2.php">var.php</a></li>
-<li><a href="form3.php">var.php</a></li>
-<li><a href="form-arithmetic.php">var.php</a></li>
-<li><a href="celcius.php">var.php</a></li>
+<li><a href="weeks/week4/form1.php">form1.php</a></li>
+<li><a href="weeks/week4/form2.php">form2.php</a></li>
+<li><a href="weeks/week4/form3.php">form3.php</a></li>
+<li><a href="weeks/week4/arithmetic-form.php">arithmetic-form.php</a></li>
+<li><a href="weeks/week4/celcius.php">celcius.php</a></li>
 
 </ol>
 
@@ -84,31 +84,31 @@
 <h3>week 5</h3>
 <ol>
 
-<li><a href="currency1.php">var.php</a></li>
-<li><a href="currency2.php">var.php</a></li>
-<li><a href="currency3.php">var.php</a></li>
-<li><a href="currency4.php">var.php</a></li>
-<li><a href="null.php">var.php</a></li>
+<li><a href="weeks/week5/currency1.php">currency1.php</a></li>
+<li><a href="weeks/week5/currency2.php">currency2.php</a></li>
+<li><a href="weeks/week5/currency3.php">currency3.php</a></li>
+<li><a href="weeks/week5/currency4.php">currency4.php</a></li>
+<li><a href="weeks/week5/null.php">null.php</a></li>
 
 </ol>
 
 <h3>week6</h3>
 <ol>
 
-<li><a href="form.php">var.php</a></li>
-<li><a href="implode.php">var.php</a></li>
-<li><a href="functions.php">var.php</a></li>
+<li><a href="weeks/week6/form.php">form.php</a></li>
+<li><a href="weeks/week6/implode.php">implode.php</a></li>
+<li><a href="weeks/week6/functions.php">functions.php</a></li>
 
 </ol>
 
 
 
-<h3>week 7</h3>
+<h3>week7</h3>
 <ol>
 
-<li><a href="random.php">var.php</a></li>
-<li><a href="pictures.php">var.php</a></li>
-<li><a href="strings.php">var.php</a></li>
+<li><a href="weeks/week7/rand.php">random.php</a></li>
+<li><a href="weeks/week7/pictures.php">pictures.php</a></li>
+<li><a href="weeks/week7/strings.php">strings.php</a></li>
 
 
 </ol>
@@ -116,7 +116,7 @@
 <h3>week 8</h3>
 <ol>
 
-<li><a href="people.php">var.php</a></li>
+<li><a href="weeks/week8/people.php">people.php</a></li>
 
 
 </ol>

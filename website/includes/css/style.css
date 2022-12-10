@@ -16,7 +16,7 @@ body {
     color: red;
 }
 header {
-    background-color:yellow;
+    background-color: rgb(227, 227, 27);
     padding:5px 0;
     
     
@@ -49,7 +49,7 @@ nav ul {
 nav li {
     float:right;
     margin-right: 30px;
-    justify-content: center;
+    justify-content: right;
 }
 
 nav a {
@@ -80,7 +80,8 @@ main {
     width:50%;
    
     background: lightblue;
-    float:left;
+    float:right;
+    justify-content: right;
 }
 
 aside {
