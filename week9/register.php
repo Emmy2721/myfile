@@ -1,5 +1,5 @@
 <?php
-include('server.php');
+ include('server.php');
 // eventually we will place our header include here
  include('./includes/header.php');
 ?>
@@ -31,7 +31,7 @@ include('server.php');
 
     <button type="submit" name="reg_user"  class="btn">Register</button>
 
-    <button type="button" onlick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>' ">Reset</button>
+    <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>' ">Reset</button>
     
     <?php
 include('errors.php');

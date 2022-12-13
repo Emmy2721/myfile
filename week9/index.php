@@ -4,15 +4,14 @@
 
 session_start();
 
-include('config.php')
+include('config.php');
 
 // did the user log in correctly  and if not the user will recive a message and will be 
-
 
 if(!isset($_SESSION['username'])) {
     $_SESSION['msg'] = 'You must login first';
     header('Location:login.php');
-}
+    }
 
 if(isset($_GET['logout'])) {
     session_destroy();
@@ -28,14 +27,15 @@ include('./includes/header.php');
 
 <?php
 
-if(isset($_SESSION['success'])) ;?>
+if(isset($_SESSION['success'])) :?>
 <div class="sucess">
 <h3>
 <?php echo $_SESSION['success'];
-unset($_SESSION['sucess']); ?>
+unset($_SESSION['success']); ?>
 </h3>
 </div>
 <!-- close sucess div-->
+
 <?php endif; ?>
 
 <?php // is our session username set???
