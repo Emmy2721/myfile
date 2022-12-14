@@ -50,7 +50,7 @@ if(isset($_SESSION['username'])) ;?>
 
 </div>
 <!--close welcome logout-->
-<?php endif; ?>
+
 
 
 </header>
